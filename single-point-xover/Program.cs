@@ -21,24 +21,28 @@ Console.ReadLine();
 
 void xover (string p1, string p2)
 {
-    Console.WriteLine("----- One point cross-over -----\n\n");
+    Console.WriteLine("----- One point cross-over -----\n");
     var rand = new Random();
     var randomPoint = rand.Next(0, Math.Max(p1.Length, p2.Length));
 
-    Console.WriteLine("Crossover point is : " + randomPoint + "\n");
+    Console.WriteLine("Parent P1 : " + p1);
+
+    Console.WriteLine("Parent P2 : " + p2);
+
+    Console.WriteLine("Crossover point is : " + randomPoint );
 
     var C1 = P1.Substring(0, randomPoint) + P2.Substring(randomPoint);
 
     var C2 = P2.Substring(0, randomPoint) + P1.Substring(randomPoint);
 
-    Console.WriteLine("First child : "+C1 + "\n");
-    Console.WriteLine("Second child : "+C2 + "\n");
+    Console.WriteLine("First child : "+C1 );
+    Console.WriteLine("Second child : "+C2 +"\n");
 }
 
 void twopointxover (string p1, string p2)
     {
 
-    Console.WriteLine("----- Two point cross-over -----\n\n");
+    Console.WriteLine("----- Two point cross-over -----\n");
     var rand = new Random();
     var j = rand.Next(1, Math.Max(p1.Length, p2.Length));
     var k = rand.Next(j, Math.Max(p1.Length, p2.Length));
@@ -78,7 +82,7 @@ void twopointxover (string p1, string p2)
 
 void uniformxover( string p1,string p2)
 {
-    Console.WriteLine("----- Uniform cross-over -----\n\n");
+    Console.WriteLine("----- Uniform cross-over -----\n");
     Console.WriteLine("Parent P1 : " + p1);
 
     Console.WriteLine("Parent P2 : " + p2);
